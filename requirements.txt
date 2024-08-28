@@ -1,0 +1,13 @@
+langchain
+langchain_community
+python-dotenv
+streamlit
+streamlit_lottie
+google-generativeai
+langchain_google_genai
+pillow
+validators
+PyPDF2
+faiss-cpu
+beautifulsoup4
+joblib
