@@ -64,7 +64,7 @@ def HomePage(**kwargs) :
             unsafe_allow_html=True
         )
 
-        st.write("# Wlcome to the IEMA GenAI Studio ! 🤖")
+        st.write("# Welcome to the IEMA GenAI Studio ! 🤖")
 
         st.write("##### This application leverages the power of Custom Models to provide advanced AI services through a user-friendly interface. Users can interact with various features designed to enhance productivity and efficiency.{}".format("\n\n"))
 
@@ -72,17 +72,16 @@ def HomePage(**kwargs) :
 
         st.markdown("""
         ###### 1.   Website Scraping and Summary Engine ✍️ - Provide any valid website url and let our AI Summarize the contents for you.
-        ###### 2.   Chat with PDF Documents Engine 📜 - Upload any PDF files and start asking questions and let our AI answer it for you.
-        ###### 3.   Automatic Blog Generation Engine 📚 - Just provide a title, some keywords and also other instructions and generate full length blog with IEMA State of the art AI Models.
-        ###### 4.   Text Paraphrasing Engine 🖍️ - Copy and paste any english text and let Gemini Paraphrase it for you.
-        ###### 5.   Text Summarization Engine ✒️ - Create any type of text summary with the help of our AI Models. 
-        ###### 6.   Automatic Email Generation Engine 📧 - Just provide your email subject and let the AI write the entire email for you.
-        ###### 7.   Automatic Keywords Extraction Engine 📝 - Just provide your text and let the AI generate keywords for you in a very efficient way.
-        ###### 8.   Image To Text Generation Engine 🖼️ - Upload an Image and provide a textual guide for the same to generate an entire document out of it. 
-        ###### 9.   Q&A Streaming Chat Engine ❓ - Ask any questions and generate the answers using our State of the Art AI Models. 
-        ###### 10.   Code Generation Engine 💡 - Just provide the brief description about the code along with the coding language and see our AI model generate the entire code.
-        ###### 11.   Code Explaining Engine ⚡ - Provide the entire code and our AI will explain all the details of the code in an excellent way.
-        ###### 12.   AI Sentiment Analysis Engine 😁 - Just provide the text and our AI models will extract the sentiment of the text.
+        ###### 2.   Automatic Blog Generation Engine 📚 - Just provide a title, some keywords and also other instructions and generate full length blog with IEMA State of the art AI Models.
+        ###### 3.   Text Paraphrasing Engine 🖍️ - Copy and paste any english text and let Gemini Paraphrase it for you.
+        ###### 4.   Text Summarization Engine ✒️ - Create any type of text summary with the help of our AI Models. 
+        ###### 5.   Automatic Email Generation Engine 📧 - Just provide your email subject and let the AI write the entire email for you.
+        ###### 6.   Automatic Keywords Extraction Engine 📝 - Just provide your text and let the AI generate keywords for you in a very efficient way.
+        ###### 7.   Image To Text Generation Engine 🖼️ - Upload an Image and provide a textual guide for the same to generate an entire document out of it. 
+        ###### 8.   Q&A Streaming Chat Engine ❓ - Ask any questions and generate the answers using our State of the Art AI Models. 
+        ###### 9.   Code Generation Engine 💡 - Just provide the brief description about the code along with the coding language and see our AI model generate the entire code.
+        ###### 10.   Code Explaining Engine ⚡ - Provide the entire code and our AI will explain all the details of the code in an excellent way.
+        ###### 11.   AI Sentiment Analysis Engine 😁 - Just provide the text and our AI models will extract the sentiment of the text.
         """
         )
 
