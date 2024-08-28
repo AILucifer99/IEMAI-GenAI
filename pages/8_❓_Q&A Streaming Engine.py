@@ -4,11 +4,13 @@ import joblib
 import streamlit as st
 import google.generativeai as genai
 from authorization import authorization
+from dotenv import load_dotenv
 
+# Loading the enviorenment variables 
+load_dotenv()
+api_key = os.getenv("API_KEY")
 
-GOOGLE_API_KEY=authorization.API_KEY
-
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=api_key)
 
 st.set_page_config(
     page_title="Streaming Q&A Engine",
