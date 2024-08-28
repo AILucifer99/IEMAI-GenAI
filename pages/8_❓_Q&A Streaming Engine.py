@@ -6,6 +6,7 @@ import google.generativeai as genai
 from authorization import authorization
 from dotenv import load_dotenv
 
+
 # Loading the enviorenment variables 
 load_dotenv()
 api_key = os.getenv("API_KEY")
