@@ -5,12 +5,14 @@ from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 from authorization import authorization
 import requests
+from dotenv import load_dotenv
 
 
 # Load environment variables
-gemini_api_key = authorization.API_KEY
+load_dotenv()
+api_key = os.getenv("API_KEY")
 
-genai.configure(api_key=gemini_api_key)
+genai.configure(api_key=api_key)
 
 
 def load_lottieurl(url: str):
