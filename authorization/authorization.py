@@ -1,1 +1,1 @@
-API_KEY="AIzaSyBzuoJyyHmDgr-OsVqHS6dxCxau2-0ircA"
+API_KEY="Your API Key Here for local usage"
