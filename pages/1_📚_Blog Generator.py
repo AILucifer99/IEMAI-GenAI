@@ -99,7 +99,7 @@ st.sidebar.header("Configuration for the System", divider="rainbow")
 
 blog_title = st.sidebar.text_area("Enter the Title of the Blog", "The impact of AI on HealthCare Industries.")
 keywords = st.sidebar.text_area("Keywords (Comma-Seperated)", "Artificial Intelligence, Health Care with AI, Automatic Decision for doctors.")
-num_words = st.sidebar.slider("Number of tokens", min_value=250, max_value=1500, step=50)
+num_words = st.sidebar.slider("Number of tokens", min_value=256, max_value=2048, step=2)
 tone_of_blog = st.sidebar.radio(
     "Style of Blog Generation", 
     options=["Professional", "Creative", "Friendly", "Informative", "Default"], 
@@ -108,7 +108,7 @@ tone_of_blog = st.sidebar.radio(
 
 
 if st.sidebar.button("✨ Generate ✨") :
-    if not gemini_api_key:
+    if not api_key:
         st.sidebar.error("Google API Key is not set. Please set it in the environment variables.")
     else:
         try :
