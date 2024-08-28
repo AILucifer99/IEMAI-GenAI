@@ -6,10 +6,13 @@ from PIL import Image
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 from authorization import authorization
+from dotenv import load_dotenv
 
+load_dotenv()
+api_key = os.getenv("API_KEY")
 
 genai.configure(
-    api_key=authorization.API_KEY
+    api_key=api_key
 )
 
 
