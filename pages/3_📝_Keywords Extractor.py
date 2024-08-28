@@ -143,7 +143,7 @@ num_words = st.sidebar.slider("Number of Keywords (Approximately)", min_value=4,
 
 
 if st.sidebar.button("✨ Generate ✨") :
-    if not gemini_api_key:
+    if not api_key:
         st.sidebar.error("Google API Key is not set. Please set it in the environment variables.")
     else:
         try :
