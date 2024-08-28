@@ -10,11 +10,12 @@ from langchain.schema.prompt_template import format_document
 from langchain_google_genai import ChatGoogleGenerativeAI
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
+from dotenv import load_dotenv
 
 
 # Load environment variables
-
-gemini_api_key = authorization.API_KEY
+load_dotenv()
+api_key = os.getenv("API_KEY")
 
 
 def load_lottieurl(url: str):
@@ -38,7 +39,7 @@ def GenerateWebsiteSummary(website_url, tone_of_generation, num_words) :
             model="gemini-1.5-flash",
             temperature=0.45, 
             top_p=0, 
-            google_api_key=gemini_api_key, 
+            google_api_key=api_key, 
             top_k=40, 
             max_output_tokens=num_words,
         )
@@ -72,7 +73,7 @@ def GenerateWebsiteSummary(website_url, tone_of_generation, num_words) :
             model="gemini-1.5-flash",
             temperature=0.75, 
             top_p=0.2, 
-            google_api_key=gemini_api_key, 
+            google_api_key=api_key, 
             top_k=120, 
             max_output_tokens=num_words
         )
@@ -106,7 +107,7 @@ def GenerateWebsiteSummary(website_url, tone_of_generation, num_words) :
             model="gemini-1.5-flash",
             temperature=0.75, 
             top_p=0.2, 
-            google_api_key=gemini_api_key, 
+            google_api_key=api_key, 
             top_k=120, 
             max_output_tokens=num_words,
         )
@@ -140,7 +141,7 @@ def GenerateWebsiteSummary(website_url, tone_of_generation, num_words) :
             model="gemini-1.5-flash",
             temperature=0.75, 
             top_p=0, 
-            google_api_key=gemini_api_key, 
+            google_api_key=api_key, 
             top_k=10, 
             max_output_tokens=num_words,
         )
@@ -232,7 +233,7 @@ def WebsiteSummarizer(**kwargs) :
         )
 
         if st.sidebar.button("✨ Generate ✨") :
-            if not gemini_api_key :
+            if not api_key :
                 st.sidebar.error("Google API Key is not set. Please set it in the environment variables.")
             elif not validators.url(website_url) :
                 st.sidebar.error("Invalid URL. Please enter a valid URL.")
