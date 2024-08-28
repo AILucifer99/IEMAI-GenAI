@@ -119,7 +119,7 @@ original_text = st.sidebar.text_area("Enter the Text For Sentiment Analysis")
 
 
 if st.sidebar.button("✨ Generate ✨") :
-    if not gemini_api_key :
+    if not api_key :
         st.sidebar.error("Google API Key is not set. Please set it in the environment variables.")
     else:
         st.subheader("Generating The Sentiment, Please Wait.....")
