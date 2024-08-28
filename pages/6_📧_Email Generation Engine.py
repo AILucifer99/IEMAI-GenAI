@@ -123,7 +123,7 @@ temperature = st.sidebar.slider("Degree Of Creativeness", min_value=0.0, max_val
 
 
 if st.sidebar.button("✨ Generate ✨") :
-    if not gemini_api_key:
+    if not api_key :
         st.sidebar.error("Google API Key is not set. Please set it in the environment variables.")
     else:
         st.subheader("Generating the Email with *Words :- {}* approximately, please wait.....".format(num_words))
