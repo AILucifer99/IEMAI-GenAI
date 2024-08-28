@@ -7,6 +7,7 @@ from streamlit_lottie import st_lottie_spinner
 from authorization import authorization
 from dotenv import load_dotenv
 
+
 # Load environment variables
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -97,9 +98,9 @@ st.subheader(
 
 st.sidebar.header("Configuration for the System", divider="rainbow")
 
-blog_title = st.sidebar.text_area("Enter the Title of the Blog", "The impact of AI on HealthCare Industries.")
-keywords = st.sidebar.text_area("Keywords (Comma-Seperated)", "Artificial Intelligence, Health Care with AI, Automatic Decision for doctors.")
-num_words = st.sidebar.slider("Number of tokens", min_value=256, max_value=2048, step=2)
+blog_title = st.sidebar.text_area("Enter the Title of the Blog", "Creation of the universe and the galaxies.")
+keywords = st.sidebar.text_area("Keywords (Comma-Seperated)", "Universe, Galaxies of the skies, Formation of the universe")
+num_words = st.sidebar.slider("Number of tokens", min_value=200, max_value=1600, step=2)
 tone_of_blog = st.sidebar.radio(
     "Style of Blog Generation", 
     options=["Professional", "Creative", "Friendly", "Informative", "Default"], 
