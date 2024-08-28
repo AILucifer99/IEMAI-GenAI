@@ -119,11 +119,11 @@ st.subheader(
 st.sidebar.header("Configuration for the System", divider="rainbow")
 
 original_text = st.sidebar.text_area("Enter the Text You Want To Paraphrase")
-num_words = st.sidebar.slider("Number of Words (Approximate)", min_value=50, max_value=350, step=5)
+num_words = st.sidebar.slider("Number of Words (Approximate)", min_value=64, max_value=512, step=2)
 
 
 if st.sidebar.button("✨ Generate ✨") :
-    if not gemini_api_key :
+    if not api_key :
         st.sidebar.error("Google API Key is not set. Please set it in the environment variables.")
     else:
         st.subheader("Generating The Paraphrased Text With *Words :- {}*, Please Wait.....".format(num_words))
@@ -132,6 +132,7 @@ if st.sidebar.button("✨ Generate ✨") :
                 prompt_instruction = [
                     f"You are an excellent english teacher and can generate new english sentences provided you are given an older one. So, Generate a paraphrase for the given text \"{original_text}\". Make sure to use professional English tonality. The paraphrased text that you are generating should be approximately {num_words} words." 
                 ]
+                
                 response = model.generate_content(prompt_instruction)
 
                 st.success("Paraphrased Text Generated Successfully.")
